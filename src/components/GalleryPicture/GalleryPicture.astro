@@ -1,0 +1,48 @@
+---
+import "@/components/GalleryPicture/GalleryPicture.css";
+import arrowForward from "@/assets/icons/ic-arrow-forward.svg";
+
+interface Props {
+  title: string;
+  description: string;
+  image: string;
+  smallImage?: string;
+}
+
+const { title, description, image, smallImage } = Astro.props;
+---
+
+<a class="cs-item" href="">
+  <picture class="cs-picture">
+    <source
+      media="(max-width: 600px)"
+      srcset={smallImage ? smallImage : image}
+    />
+    <source media="(min-width: 601px)" srcset={image} />
+    <img
+      loading="lazy"
+      decoding="async"
+      src={image}
+      alt="fancy house"
+      width="346"
+      height="346"
+    />
+  </picture>
+  <!-- Hover Box -->
+  <div class="cs-hover-box">
+    <picture class="cs-icon">
+      <img
+        loading="lazy"
+        decoding="async"
+        src={arrowForward.src}
+        width="20"
+        height="20"
+        aria-hidden="true"
+      />
+    </picture>
+    <h3 class="cs-h3">{title}</h3>
+    <p class="cs-hover-box-text">
+      {description}
+    </p>
+  </div>
+</a>

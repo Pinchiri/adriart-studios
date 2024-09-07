@@ -1,0 +1,9 @@
+export const THEME_COLOR = {
+  PRIMARY: "#40e0d0",
+  PRIMARY_LIGHT: "#40e0d0",
+  SECONDARY: "#00a89a",
+  SECONDARY_LIGHT: "#3abb96",
+  PRIMARY_LIGHT: "#40e0d0",
+  PRIMARY_LIGHT: "#40e0d0",
+  BOTY_TEXT: "#334b48",
+};
